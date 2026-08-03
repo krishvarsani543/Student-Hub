@@ -4,116 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Profile</title>
-        <link rel="stylesheet" href="profile.css">
+
+    <link rel="stylesheet" href="profile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
 
-    <center>
-        <h1>Student Profile</h1>
-        
+<div class="container">
 
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-             alt="Profile Photo"
-             width="150">
+    <!-- Profile Header -->
+    <div class="profile-header">
 
-        <h2>Krish Varsani</h2>
-        <p><b>B.Tech Computer Science Engineering</b></p>
-    </center>
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Student">
 
-    <hr>
+        <h1>Krish Varsani</h1>
 
-    <h2>Personal Information</h2>
+        <p>B.Tech Computer Science Engineering</p>
 
-    <table border="1" cellpadding="10">
+        <span class="badge">3rd Semester</span>
 
-        <tr>
-            <th>Name</th>
-            <td>Krish Varsani</td>
-        </tr>
-         
-             <tr>
-            <th>Date Of Birth</th>
-            <td>26-02-2007</td>
-        </tr>
-        <tr>
-            <th>Student ID</th>
-            <td>25DCS140</td>
-        </tr>
+    </div>
 
-        <tr>
-            <th>Email</th>
-            <td>krish@gmail.com</td>
-        </tr>
+    <!-- Statistics -->
 
-        <tr>
-            <th>Phone</th>
-            <td>+91 9876543210</td>
-        </tr>
+    <div class="stats">
 
-        <tr>
-            <th>Department</th>
-            <td>Computer Science Engineering</td>
-        </tr>
+        <div class="card">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h2>8.75</h2>
+            <p>CGPA</p>
+        </div>
 
-        <tr>
-            <th>Semester</th>
-            <td>3rd Semester</td>
-        </tr>
+        <div class="card">
+            <i class="fa-solid fa-user-check"></i>
+            <h2>96%</h2>
+            <p>Attendance</p>
+        </div>
 
-        <tr>
-            <th>Address</th>
-            <td>Anand, Gujarat</td>
-        </tr>
+        <div class="card">
+            <i class="fa-solid fa-folder-open"></i>
+            <h2>3</h2>
+            <p>Projects</p>
+        </div>
 
-    </table>
+        <div class="card">
+            <i class="fa-solid fa-book"></i>
+            <h2>7</h2>
+            <p>Assignments</p>
+        </div>
 
-    <hr>
+    </div>
 
-    <h2>Academic Details</h2>
+    <!-- Personal Information -->
 
-    <ul>
-        <li>CGPA : 8.75</li>
-        <li>Attendance : 96%</li>
-        <li>Assignments Submitted : 7</li>
-        <li>Projects Completed : 3</li>
-    </ul>
+    <div class="section">
 
-    <hr>
+        <h2>Personal Information</h2>
 
-    <h2>Skills</h2>
+        <div class="details">
 
-    <ul>
-        <li>C Programming</li>
-        <li>C++</li>
-        <li>Java</li>
-        <li>HTML</li>
-        <li>Problem Solving</li>
-    </ul>
+            <div>
+                <h4>Student ID</h4>
+                <p>25DCS140</p>
+            </div>
 
-    <hr>
+            <div>
+                <h4>Date of Birth</h4>
+                <p>26-02-2007</p>
+            </div>
 
-    <h2>Achievements</h2>
+            <div>
+                <h4>Email</h4>
+                <p>krish@gmail.com</p>
+            </div>
 
-    <ol>
-        <li> Winner - Coding Competition</li>
-        <li> Web Development Workshop Completed</li>
-        <li> National Hackathon Participant</li>
-    </ol>
+            <div>
+                <h4>Phone</h4>
+                <p>+91 9876543210</p>
+            </div>
 
-    <hr>
+            <div>
+                <h4>Department</h4>
+                <p>Computer Science Engineering</p>
+            </div>
 
-    <h2>Profile Actions</h2>
+            <div>
+                <h4>Address</h4>
+                <p>Anand, Gujarat</p>
+            </div>
 
-    <a href="edit.html">Edit Profile  | </a>
+        </div>
 
-    <a href="dashboard.html">Deshboard  |</a>
+    </div>
 
-    <a href="home.html">Home  | </a>
+    <!-- Skills -->
 
-    <a href="login.html">Logout  |</a>
+    <div class="section">
 
-    <hr>
+        <h2>Skills</h2>
 
- 
+        <div class="skills">
+
+            <span>C</span>
+            <span>C++</span>
+            <span>Java</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Problem Solving</span>
+
+        </div>
+
+    </div>
+
+    <!-- Achievements -->
+
+    <div class="section">
+
+        <h2>Achievements</h2>
+
+        <ul>
+
+            <li>🏆 Winner - Coding Competition</li>
+
+            <li>💻 Web Development Workshop Completed</li>
+
+            <li>🚀 National Hackathon Participant</li>
+
+            <li>📜 Java Programming Certificate</li>
+
+        </ul>
+
+    </div>
+
+    <!-- Buttons -->
+
+    <div class="buttons">
+
+        <a href="edit.html">Edit Profile</a>
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="home.html">Home</a>
+
+        <a href="login.html">Logout</a>
+
+    </div>
+
+</div>
+
 </body>
 </html>
