@@ -1,0 +1,162 @@
+[
+  {
+    "id": "25DCE001",
+    "name": "Aarav Sharma",
+    "department": "Computer Engineering",
+    "semester": 5,
+    "email": "25dce001@charusat.edu.in",
+    "gpa": 9.45,
+    "specialization": "Artificial Intelligence",
+    "status": "Active"
+  },
+  {
+    "id": "25DCE002",
+    "name": "Ananya Patel",
+    "department": "Information Technology",
+    "semester": 5,
+    "email": "25dit002@charusat.edu.in",
+    "gpa": 9.20,
+    "specialization": "Cloud & DevOps",
+    "status": "Active"
+  },
+  {
+    "id": "25DCE003",
+    "name": "Rohan Mehta",
+    "department": "Computer Engineering",
+    "semester": 7,
+    "email": "25dce003@charusat.edu.in",
+    "gpa": 8.85,
+    "specialization": "Cybersecurity",
+    "status": "Active"
+  },
+  {
+    "id": "25DCE004",
+    "name": "Pooja Desai",
+    "department": "Artificial Intelligence & Data Science",
+    "semester": 3,
+    "email": "25dai004@charusat.edu.in",
+    "gpa": 9.60,
+    "specialization": "Deep Learning",
+    "status": "Active"
+  },
+  {
+    "id": "25DCE005",
+    "name": "Vikram Singh",
+    "department": "Electronics & Communication",
+    "semester": 5,
+    "email": "25dec005@charusat.edu.in",
+    "gpa": 8.40,
+    "specialization": "Embedded Systems",
+    "status": "Active"
+  },
+  {
+    "id": "25DCE006",
+    "name": "Sneha Joshi",
+    "department": "Computer Engineering",
+    "semester": 3,
+    "email": "25dce006@charusat.edu.in",
+    "gpa": 9.15,
+    "specialization": "Full-Stack Development",
+    "status": "Active"
+  },
+  {
+    "id": "25DCE007",
+    "name": "Karan Shah",
+    "department": "Information Technology",
+    "semester": 7,
+    "email": "25dit007@charusat.edu.in",
+    "gpa": 8.70,
+    "specialization": "Data Analytics",
+    "status": "Active"
+  },
+  {
+    "id": "25DCE008",
+    "name": "Diya Trivedi",
+    "department": "Computer Engineering",
+    "semester": 5,
+    "email": "25dce008@charusat.edu.in",
+    "gpa": 9.30,
+    "specialization": "Mobile App Development",
+    "status": "Active"
+  },
+  {
+    "id": "25DCE009",
+    "name": "Manish Verma",
+    "department": "Master of Computer Applications",
+    "semester": 3,
+    "email": "25mca009@charusat.edu.in",
+    "gpa": 8.90,
+    "specialization": "Software Engineering",
+    "status": "Active"
+  },
+  {
+    "id": "25DCE010",
+    "name": "Tanvi Dave",
+    "department": "Artificial Intelligence & Data Science",
+    "semester": 3,
+    "email": "25dai010@charusat.edu.in",
+    "gpa": 9.55,
+    "specialization": "NLP & Computer Vision",
+    "status": "Active"
+  },
+  {
+    "id": "25DCE011",
+    "name": "Harsh Patel",
+    "department": "Computer Engineering",
+    "semester": 7,
+    "email": "25dce011@charusat.edu.in",
+    "gpa": 8.65,
+    "specialization": "Blockchain",
+    "status": "Active"
+  },
+  {
+    "id": "25DCE012",
+    "name": "Riddhi Parekh",
+    "department": "Information Technology",
+    "semester": 5,
+    "email": "25dit012@charusat.edu.in",
+    "gpa": 9.05,
+    "specialization": "UI/UX & Frontend",
+    "status": "Active"
+  },
+  {
+    "id": "25DCE013",
+    "name": "Yash Bhatt",
+    "department": "Computer Engineering",
+    "semester": 3,
+    "email": "25dce013@charusat.edu.in",
+    "gpa": 8.95,
+    "specialization": "Competitive Programming",
+    "status": "Active"
+  },
+  {
+    "id": "25DCE014",
+    "name": "StudentHub Admin",
+    "department": "Computer Engineering",
+    "semester": 5,
+    "email": "25dce014@charusat.edu.in",
+    "gpa": 9.80,
+    "specialization": "Web Frameworks & Architecture",
+    "status": "Lead Developer"
+  },
+  {
+    "id": "25DCE015",
+    "name": "Kavya Soni",
+    "department": "Electronics & Communication",
+    "semester": 5,
+    "email": "25dec015@charusat.edu.in",
+    "gpa": 8.50,
+    "specialization": "VLSI Design",
+    "status": "Active"
+  },
+  {
+    "id": "25DCE016",
+    "name": "Devansh Rana",
+    "department": "Information Technology",
+    "semester": 7,
+    "email": "25dit016@charusat.edu.in",
+    "gpa": 9.10,
+    "specialization": "DevOps & SRE",
+    "status": "Active"
+  }
+]

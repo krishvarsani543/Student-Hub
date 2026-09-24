@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical 6 - Fetch API & JSON Rendering | StudentHub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <a href="../index.html" class="header-brand">
+      <img src="../IMAGES/logo.svg" alt="StudentHub Logo">
+      <div>
+        <h1>Student<span>Hub</span> Portal</h1>
+        <small style="color:#94a3b8; font-size:12px;">Practical 6: Fetch API, Search, Filter &amp; Pagination</small>
+      </div>
+    </a>
+    <nav class="nav-pills">
+      <a href="../index.html"><i class="fa-solid fa-house"></i> All Practicals</a>
+      <a href="../Practical-1/index.html">Practical 1</a>
+      <a href="../Practical-2/home.html">Practical 2</a>
+      <a href="../Practical-3/index.html">Practical 3</a>
+      <a href="../Practical-4/index.html">Practical 4</a>
+      <a href="../Practical-5/index.html">Practical 5</a>
+      <a href="index.html" class="active">Practical 6</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    
+    <!-- BANNER -->
+    <div class="banner">
+      <span class="badge">Practical 6</span>
+      <span class="badge" style="background:#fef3c7; color:#b45309;">CO3, CO4 Mapping</span>
+      <h2>Rendering External JSON Data using Fetch API, Search &amp; Filter</h2>
+      <p style="color:var(--text-muted);">
+        Asynchronous data fetching from external JSON endpoints (`events.json`, `students.json`, `faqs.json` with 15+ records each). Features real-time multi-field search, category filtering, multi-criteria sorting, client-side pagination, dependent dropdowns, and localStorage offline caching.
+      </p>
+    </div>
+
+    <!-- DATASET TABS -->
+    <div class="tabs-wrapper">
+      <button class="tab-btn active" data-dataset="events">
+        <i class="fa-solid fa-calendar-days"></i> Campus Events (<span id="count-events">16</span>)
+      </button>
+      <button class="tab-btn" data-dataset="students">
+        <i class="fa-solid fa-user-graduate"></i> Student Directory (<span id="count-students">16</span>)
+      </button>
+      <button class="tab-btn" data-dataset="faqs">
+        <i class="fa-solid fa-circle-question"></i> FAQ Knowledgebase (<span id="count-faqs">16</span>)
+      </button>
+    </div>
+
+    <!-- CONTROLS BAR (SEARCH, FILTER, SORT, LIMIT) -->
+    <div class="controls-card">
+      
+      <!-- Search Input -->
+      <div class="control-group search-group">
+        <label for="searchInput"><i class="fa-solid fa-magnifying-glass"></i> Live Search</label>
+        <div class="input-wrapper">
+          <input type="text" id="searchInput" placeholder="Search by title, keyword, venue, name...">
+          <button id="clearSearchBtn" class="clear-btn" title="Clear Search">&times;</button>
+        </div>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="control-group">
+        <label for="categoryFilter"><i class="fa-solid fa-filter"></i> Category / Dept</label>
+        <select id="categoryFilter">
+          <option value="ALL">All Categories</option>
+        </select>
+      </div>
+
+      <!-- Sort Filter -->
+      <div class="control-group">
+        <label for="sortFilter"><i class="fa-solid fa-arrow-down-a-z"></i> Sort By</label>
+        <select id="sortFilter">
+          <option value="default">Default Order</option>
+          <option value="name_asc">Name / Title (A - Z)</option>
+          <option value="name_desc">Name / Title (Z - A)</option>
+        </select>
+      </div>
+
+      <!-- Items Per Page -->
+      <div class="control-group" style="max-width: 130px;">
+        <label for="pageSizeSelect"><i class="fa-solid fa-list-ol"></i> Per Page</label>
+        <select id="pageSizeSelect">
+          <option value="4">4 Items</option>
+          <option value="8" selected>8 Items</option>
+          <option value="16">16 Items</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- DEPENDENT DROPDOWNS (INTERMEDIATE EXTENSION) -->
+    <div class="dependent-box" id="dependentSection">
+      <div class="dependent-header">
+        <h4><i class="fa-solid fa-diagram-project"></i> Dependent Filter (Department &rarr; Semester &rarr; Specialization)</h4>
+        <button id="resetDependentBtn" class="btn-sm"><i class="fa-solid fa-rotate-left"></i> Reset Filter</button>
+      </div>
+      <div class="dependent-controls">
+        <select id="deptSelect">
+          <option value="">-- All Departments --</option>
+          <option value="Computer Engineering">Computer Engineering</option>
+          <option value="Information Technology">Information Technology</option>
+          <option value="Artificial Intelligence & Data Science">AI &amp; Data Science</option>
+          <option value="Electronics & Communication">Electronics &amp; Comm.</option>
+        </select>
+
+        <select id="semSelect" disabled>
+          <option value="">-- Select Semester --</option>
+        </select>
+
+        <select id="specSelect" disabled>
+          <option value="">-- Select Specialization --</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- RESULTS SUMMARY & CACHE STATUS -->
+    <div class="status-bar">
+      <div>
+        Showing <strong id="showingCount">0</strong> of <strong id="totalCount">0</strong> records
+        <span id="activeFilterBadge" class="filter-badge" style="display:none;"></span>
+      </div>
+      <div class="cache-badge" id="cacheStatus">
+        <i class="fa-solid fa-bolt"></i> Live Fetch API
+      </div>
+    </div>
+
+    <!-- LOADING SPINNER -->
+    <div id="loadingSpinner" class="spinner-wrapper" style="display:none;">
+      <div class="spinner"></div>
+      <p>Fetching external JSON dataset...</p>
+    </div>
+
+    <!-- ERROR STATE CONTAINER -->
+    <div id="errorContainer" class="error-card" style="display:none;">
+      <i class="fa-solid fa-triangle-exclamation error-icon"></i>
+      <h3>Unable to Load Dataset</h3>
+      <p id="errorMessage">Network error or file not found.</p>
+      <button id="retryBtn" class="retry-btn">
+        <i class="fa-solid fa-rotate-right"></i> Retry Connection
+      </button>
+    </div>
+
+    <!-- DYNAMIC DATA GRID / LIST -->
+    <div id="dataContainer" class="data-grid"></div>
+
+    <!-- EMPTY STATE -->
+    <div id="emptyContainer" class="empty-card" style="display:none;">
+      <i class="fa-solid fa-magnifying-glass-xmark"></i>
+      <h3>No Records Found</h3>
+      <p>Try adjusting your search keywords or clearing filters.</p>
+    </div>
+
+    <!-- PAGINATION CONTROLS -->
+    <div class="pagination-wrapper" id="paginationWrapper">
+      <button id="prevPageBtn" class="page-btn"><i class="fa-solid fa-chevron-left"></i> Prev</button>
+      <div id="pageNumbers" class="page-numbers"></div>
+      <button id="nextPageBtn" class="page-btn">Next <i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer>
+    <p>StudentHub Portal &copy; 2026 • CHARUSAT University • Web Development Framework</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

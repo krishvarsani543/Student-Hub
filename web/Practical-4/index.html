@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical 4 - JavaScript DOM & UI Interactivity | StudentHub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <a href="../index.html" class="header-brand">
+      <img src="../IMAGES/logo.svg" alt="StudentHub Logo" id="brand-logo">
+      <div>
+        <h1>Student<span>Hub</span> Portal</h1>
+        <small style="color:#94a3b8; font-size:12px;">Practical 4: JavaScript DOM & UI Interactivity</small>
+      </div>
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <nav class="nav-pills desktop-nav">
+      <a href="../index.html"><i class="fa-solid fa-house"></i> All Practicals</a>
+      <a href="../Practical-1/index.html">Practical 1</a>
+      <a href="../Practical-2/home.html">Practical 2</a>
+      <a href="../Practical-3/index.html">Practical 3</a>
+      <a href="index.html" class="active">Practical 4</a>
+      <a href="../Practical-5/index.html">Practical 5</a>
+      <a href="../Practical-6/index.html">Practical 6</a>
+    </nav>
+
+    <!-- Header Actions (Theme Switcher + Hamburger) -->
+    <div class="header-controls">
+      <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Dark/Light Mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER MENU -->
+  <div id="mobileDrawer" class="mobile-drawer">
+    <div class="drawer-header">
+      <span style="font-weight:700; color:var(--primary);">Menu Navigation</span>
+      <button id="closeDrawerBtn" class="close-drawer-btn">&times;</button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="../index.html"><i class="fa-solid fa-house"></i> Master Portal Hub</a>
+      <a href="../Practical-1/index.html"><i class="fa-solid fa-file-lines"></i> Practical 1 (Initiation)</a>
+      <a href="../Practical-2/home.html"><i class="fa-solid fa-code"></i> Practical 2 (HTML5 Pages)</a>
+      <a href="../Practical-3/index.html"><i class="fa-solid fa-palette"></i> Practical 3 (Responsive CSS)</a>
+      <a href="index.html" class="active"><i class="fa-solid fa-wand-magic-sparkles"></i> Practical 4 (JS DOM)</a>
+      <a href="../Practical-5/index.html"><i class="fa-solid fa-clipboard-check"></i> Practical 5 (Validation)</a>
+      <a href="../Practical-6/index.html"><i class="fa-solid fa-database"></i> Practical 6 (Fetch JSON)</a>
+    </nav>
+  </div>
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+
+  <div class="container">
+    
+    <!-- BANNER -->
+    <div class="banner">
+      <span class="badge">Practical 4</span>
+      <span class="badge" style="background:#fef3c7; color:#b45309;">CO3, CO4 Mapping</span>
+      <h2>JavaScript DOM Manipulation, Event Handling & UI Interactivity</h2>
+      <p style="color:var(--text-muted);">
+        Interactive frontend components demonstrating DOM selection, class manipulation, event bubbling, localStorage state persistence, sliders, modals, notification systems, and responsive drawers.
+      </p>
+    </div>
+
+    <!-- 1. CAMPUS IMAGE SLIDER -->
+    <section class="component-card">
+      <div class="card-header">
+        <h3><i class="fa-solid fa-images"></i> 1. Campus Highlights Slider (Auto-Slide, Controls &amp; Dots)</h3>
+        <span class="pill-tag">DOM &amp; Timers</span>
+      </div>
+      <div class="card-body">
+        <div class="slider-container" id="campusSlider">
+          <div class="slider-track" id="sliderTrack">
+            
+            <div class="slide active">
+              <img src="../IMAGES/college campus.jpg" alt="University Main Campus">
+              <div class="slide-caption">
+                <h4>Vibrant University Campus</h4>
+                <p>Collaborative learning spaces and green campus atmosphere.</p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="../IMAGES/campus2.jpeg" alt="Graduation Convocation">
+              <div class="slide-caption">
+                <h4>Annual Convocation &amp; Awards</h4>
+                <p>Celebrating academic excellence and student achievements.</p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="../IMAGES/campus3.jpeg" alt="Student Life">
+              <div class="slide-caption">
+                <h4>World-Class Computer Labs</h4>
+                <p>High-performance computing resources and AI innovation labs.</p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="../IMAGES/campus4.jpg" alt="Examination Hall">
+              <div class="slide-caption">
+                <h4>State-of-the-Art Facilities</h4>
+                <p>Modern lecture halls equipped for 21st-century engineering.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Controls -->
+          <button class="slider-btn prev-btn" id="prevSlideBtn" aria-label="Previous slide">&#10094;</button>
+          <button class="slider-btn next-btn" id="nextSlideBtn" aria-label="Next slide">&#10095;</button>
+
+          <!-- Dots -->
+          <div class="slider-dots" id="sliderDots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. COLLAPSIBLE FAQ ACCORDION -->
+    <section class="component-card">
+      <div class="card-header">
+        <h3><i class="fa-solid fa-circle-question"></i> 2. Dynamic Collapsible FAQ Accordion</h3>
+        <span class="pill-tag">Event Delegation</span>
+      </div>
+      <div class="card-body">
+        <div class="faq-accordion" id="faqAccordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do I register for the upcoming Hackathon 2026?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Navigate to the Events page or click the Event Registration button below to open the modal registration form with instant seat reservation.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does StudentHub remember my Dark/Light theme?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>The theme preference is stored in browser <code>localStorage.setItem('studenthub_theme', 'dark')</code> and restored automatically on page load before DOM rendering.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Where can I download the semester exam timetable?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Timetables are published under the student dashboard announcements and pinned to the marquee header on the homepage.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. MODAL POPUP & TOAST NOTIFICATION DEMO -->
+    <div class="grid-2">
+      
+      <!-- Modal Trigger Card -->
+      <section class="component-card">
+        <div class="card-header">
+          <h3><i class="fa-solid fa-window-restore"></i> 3. Modal Popup Dialog</h3>
+          <span class="pill-tag">DOM Manipulation</span>
+        </div>
+        <div class="card-body">
+          <p style="color:var(--text-muted); font-size:14px; margin-bottom:16px;">
+            Opens an accessible modal popup window with backdrop blur, smooth animation, and keyboard (ESC) dismiss support.
+          </p>
+          <button id="openModalBtn" class="btn btn-primary">
+            <i class="fa-solid fa-pen-to-square"></i> Open Event Registration Modal
+          </button>
+        </div>
+      </section>
+
+      <!-- Toast Triggers Card -->
+      <section class="component-card">
+        <div class="card-header">
+          <h3><i class="fa-solid fa-bell"></i> 4. Toast Notification Banners</h3>
+          <span class="pill-tag">Dynamic Elements</span>
+        </div>
+        <div class="card-body">
+          <p style="color:var(--text-muted); font-size:14px; margin-bottom:16px;">
+            Trigger real-time auto-dismissing feedback notifications:
+          </p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button class="btn btn-success" onclick="triggerToast('Operation completed successfully!', 'success')">Success</button>
+            <button class="btn btn-danger" onclick="triggerToast('Invalid input or network error!', 'error')">Error</button>
+            <button class="btn btn-info" onclick="triggerToast('New announcement posted by faculty.', 'info')">Info</button>
+            <button class="btn btn-warning" onclick="triggerToast('Semester fee due date is approaching.', 'warning')">Warning</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <!-- MODAL POPUP DIALOG -->
+  <div id="eventModal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-ticket"></i> Register for Hackathon 2026</h3>
+        <button id="closeModalBtn" class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="modalForm">
+          <div class="form-group">
+            <label for="modalStudentName">Student Full Name</label>
+            <input type="text" id="modalStudentName" placeholder="e.g. John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="modalStudentEmail">College Email</label>
+            <input type="email" id="modalStudentEmail" placeholder="e.g. 25dce014@charusat.edu.in" required>
+          </div>
+          <div class="form-group">
+            <label for="modalTeamSize">Team Size</label>
+            <select id="modalTeamSize">
+              <option value="1">Individual (1 Member)</option>
+              <option value="2">Duo (2 Members)</option>
+              <option value="4" selected>Full Squad (4 Members)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:8px;">
+            <i class="fa-solid fa-check-circle"></i> Confirm Registration
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer>
+    <p>StudentHub Portal &copy; 2026 • CHARUSAT University • Web Development Framework</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

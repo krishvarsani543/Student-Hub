@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical 5 - Registration Form & Validation | StudentHub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <a href="../index.html" class="header-brand">
+      <img src="../IMAGES/logo.svg" alt="StudentHub Logo">
+      <div>
+        <h1>Student<span>Hub</span> Portal</h1>
+        <small style="color:#94a3b8; font-size:12px;">Practical 5: Registration Form &amp; Validation</small>
+      </div>
+    </a>
+    <nav class="nav-pills">
+      <a href="../index.html"><i class="fa-solid fa-house"></i> All Practicals</a>
+      <a href="../Practical-1/index.html">Practical 1</a>
+      <a href="../Practical-2/home.html">Practical 2</a>
+      <a href="../Practical-3/index.html">Practical 3</a>
+      <a href="../Practical-4/index.html">Practical 4</a>
+      <a href="index.html" class="active">Practical 5</a>
+      <a href="../Practical-6/index.html">Practical 6</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    
+    <!-- BANNER -->
+    <div class="banner">
+      <span class="badge">Practical 5</span>
+      <span class="badge" style="background:#fef3c7; color:#b45309;">CO1, CO3 Mapping</span>
+      <h2>Registration Form with Frontend Validation &amp; Error Handling</h2>
+      <p style="color:var(--text-muted);">
+        Comprehensive student enrollment form with HTML5 controls, real-time Regular Expression validations, dynamic password strength evaluation, interactive Canvas CAPTCHA, and accessible error styling.
+      </p>
+    </div>
+
+    <!-- FORM WRAPPER -->
+    <div class="form-wrapper">
+      <div class="form-header">
+        <div class="header-icon"><i class="fa-solid fa-user-graduate"></i></div>
+        <h2>Student Registration Portal</h2>
+        <p>Please enter your academic and personal details to create your StudentHub profile.</p>
+      </div>
+
+      <!-- SUCCESS ALERT MODAL / MESSAGE -->
+      <div id="formSuccessAlert" class="alert alert-success" style="display:none;">
+        <i class="fa-solid fa-circle-check"></i>
+        <div>
+          <strong>Registration Successful!</strong>
+          <p>Your student profile has been validated and recorded. Redirecting to dashboard...</p>
+        </div>
+      </div>
+
+      <form id="registrationForm" novalidate>
+        
+        <!-- ROW 1: FULL NAME & EMAIL -->
+        <div class="form-row">
+          <div class="form-group" id="group-name">
+            <label for="fullName">Full Name <span class="required">*</span></label>
+            <div class="input-container">
+              <i class="fa-solid fa-user input-icon"></i>
+              <input type="text" id="fullName" placeholder="e.g. John Doe" autocomplete="name" required>
+            </div>
+            <span class="error-msg" id="nameError"></span>
+          </div>
+
+          <div class="form-group" id="group-email">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <div class="input-container">
+              <i class="fa-solid fa-envelope input-icon"></i>
+              <input type="email" id="email" placeholder="e.g. student@charusat.edu.in" autocomplete="email" required>
+            </div>
+            <span class="error-msg" id="emailError"></span>
+          </div>
+        </div>
+
+        <!-- ROW 2: MOBILE & DOB -->
+        <div class="form-row">
+          <div class="form-group" id="group-mobile">
+            <label for="mobile">Mobile Number (10 Digits) <span class="required">*</span></label>
+            <div class="input-container">
+              <i class="fa-solid fa-phone input-icon"></i>
+              <input type="tel" id="mobile" placeholder="e.g. 9876543210" maxlength="10" required>
+            </div>
+            <span class="error-msg" id="mobileError"></span>
+          </div>
+
+          <div class="form-group" id="group-dob">
+            <label for="dob">Date of Birth <span class="required">*</span></label>
+            <div class="input-container">
+              <i class="fa-solid fa-calendar-day input-icon"></i>
+              <input type="date" id="dob" required>
+            </div>
+            <span class="error-msg" id="dobError"></span>
+          </div>
+        </div>
+
+        <!-- ROW 3: COURSE & YEAR -->
+        <div class="form-row">
+          <div class="form-group" id="group-course">
+            <label for="course">Enrolled Degree Course <span class="required">*</span></label>
+            <div class="input-container">
+              <i class="fa-solid fa-book-open input-icon"></i>
+              <select id="course" required>
+                <option value="">-- Select Degree Course --</option>
+                <option value="B.Tech Computer Engineering">B.Tech Computer Engineering</option>
+                <option value="B.Tech Information Technology">B.Tech Information Technology</option>
+                <option value="B.Tech Artificial Intelligence &amp; Data Science">B.Tech AI &amp; Data Science</option>
+                <option value="B.Tech Electronics &amp; Communication">B.Tech Electronics &amp; Communication</option>
+                <option value="Master of Computer Applications (MCA)">Master of Computer Applications (MCA)</option>
+              </select>
+            </div>
+            <span class="error-msg" id="courseError"></span>
+          </div>
+
+          <div class="form-group" id="group-year">
+            <label for="academicYear">Academic Year <span class="required">*</span></label>
+            <div class="input-container">
+              <i class="fa-solid fa-graduation-cap input-icon"></i>
+              <select id="academicYear" required>
+                <option value="">-- Select Year --</option>
+                <option value="1st Year (Semester 1 & 2)">1st Year (Semester 1 &amp; 2)</option>
+                <option value="2nd Year (Semester 3 & 4)">2nd Year (Semester 3 &amp; 4)</option>
+                <option value="3rd Year (Semester 5 & 6)">3rd Year (Semester 5 &amp; 6)</option>
+                <option value="4th Year (Semester 7 & 8)">4th Year (Semester 7 &amp; 8)</option>
+              </select>
+            </div>
+            <span class="error-msg" id="yearError"></span>
+          </div>
+        </div>
+
+        <!-- ROW 4: GENDER -->
+        <div class="form-group" id="group-gender" style="margin-bottom:20px;">
+          <label>Gender <span class="required">*</span></label>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="gender" value="Male" required>
+              <span>Male</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="gender" value="Female">
+              <span>Female</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="gender" value="Other">
+              <span>Other</span>
+            </label>
+          </div>
+          <span class="error-msg" id="genderError"></span>
+        </div>
+
+        <!-- ROW 5: PASSWORD & CONFIRM PASSWORD -->
+        <div class="form-row">
+          <div class="form-group" id="group-password">
+            <label for="password">Create Password <span class="required">*</span></label>
+            <div class="input-container">
+              <i class="fa-solid fa-lock input-icon"></i>
+              <input type="password" id="password" placeholder="Min. 8 chars, 1 Upper, 1 Lower, 1 Digit, 1 Special" required>
+              <button type="button" class="toggle-password-btn" id="togglePasswordBtn" title="Show/Hide Password">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+            <!-- Password Strength Bar -->
+            <div class="strength-meter" id="strengthMeter">
+              <div class="strength-bar" id="strengthBar"></div>
+            </div>
+            <div class="strength-label" id="strengthLabel">Password Strength: <span>None</span></div>
+            <span class="error-msg" id="passwordError"></span>
+          </div>
+
+          <div class="form-group" id="group-confirm">
+            <label for="confirmPassword">Confirm Password <span class="required">*</span></label>
+            <div class="input-container">
+              <i class="fa-solid fa-shield-halved input-icon"></i>
+              <input type="password" id="confirmPassword" placeholder="Re-enter password" required>
+            </div>
+            <span class="error-msg" id="confirmError"></span>
+          </div>
+        </div>
+
+        <!-- ROW 6: ADDRESS -->
+        <div class="form-group" id="group-address">
+          <label for="address">Residential Address <span class="required">*</span></label>
+          <textarea id="address" rows="3" placeholder="Enter permanent residential address (min. 10 chars)" required></textarea>
+          <span class="error-msg" id="addressError"></span>
+        </div>
+
+        <!-- ROW 7: CUSTOM CANVAS CAPTCHA -->
+        <div class="captcha-box">
+          <div class="captcha-header">
+            <label for="captchaInput"><i class="fa-solid fa-shield-virus"></i> Security Verification (Canvas CAPTCHA) <span class="required">*</span></label>
+            <button type="button" id="refreshCaptchaBtn" class="refresh-captcha-btn" title="Generate New Code">
+              <i class="fa-solid fa-rotate-right"></i> Refresh
+            </button>
+          </div>
+          <div class="captcha-controls">
+            <canvas id="captchaCanvas" width="180" height="50" class="captcha-canvas"></canvas>
+            <input type="text" id="captchaInput" placeholder="Enter characters above" required maxlength="6">
+          </div>
+          <span class="error-msg" id="captchaError"></span>
+        </div>
+
+        <!-- ROW 8: TERMS ACCEPTANCE -->
+        <div class="form-group terms-group" id="group-terms">
+          <label class="checkbox-label">
+            <input type="checkbox" id="termsCheckbox" required>
+            <span>I accept the <a href="#" onclick="alert('StudentHub Terms: All information submitted must be accurate and complies with University IT policy.'); return false;">Terms &amp; Conditions</a> and Privacy Policy.</span>
+          </label>
+          <span class="error-msg" id="termsError"></span>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <div class="form-actions">
+          <button type="submit" class="submit-btn" id="submitBtn">
+            <i class="fa-solid fa-paper-plane"></i> Submit Registration
+          </button>
+          <button type="reset" class="reset-btn" id="resetBtn">
+            <i class="fa-solid fa-arrow-rotate-left"></i> Clear Form
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer>
+    <p>StudentHub Portal &copy; 2026 • CHARUSAT University • Web Development Framework</p>
+  </footer>
+
+  <script src="validation.js"></script>
+</body>
+</html>

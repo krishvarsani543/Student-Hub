@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "category": "Admissions",
+    "question": "What is the procedure for semester registration in StudentHub?",
+    "answer": "Log in to StudentHub using your student credentials, navigate to Registration, verify your academic year and elective courses, and click Submit Registration."
+  },
+  {
+    "id": 2,
+    "category": "Examinations",
+    "question": "Where can students find the official examination timetable?",
+    "answer": "The examination schedule is published under the Dashboard Announcements panel and linked directly in the homepage announcement ticker."
+  },
+  {
+    "id": 3,
+    "category": "Technical",
+    "question": "How do I switch between Light and Dark mode?",
+    "answer": "Click the Sun/Moon toggle icon in the top header. Your preference is automatically persisted across browser sessions via localStorage."
+  },
+  {
+    "id": 4,
+    "category": "Events",
+    "question": "How are event certificates distributed after hackathons?",
+    "answer": "Digital verified certificates with unique QR codes are automatically generated and linked to your StudentHub Profile under Achievements."
+  },
+  {
+    "id": 5,
+    "category": "Placements",
+    "question": "What is the minimum eligibility criteria for campus placement drives?",
+    "answer": "Students must have an overall CGPA of 6.5 or above with no active backlogs to register for tier-1 company placement drives."
+  },
+  {
+    "id": 6,
+    "category": "Admissions",
+    "question": "How can I update my residential address or contact details?",
+    "answer": "Navigate to the Profile page and click 'Edit Profile'. Update the address or phone number and submit the form for administrative verification."
+  },
+  {
+    "id": 7,
+    "category": "Technical",
+    "question": "What should I do if the Fetch API JSON data fails to load?",
+    "answer": "Click the 'Retry Connection' button. StudentHub also caches the latest JSON responses in browser localStorage for seamless offline access."
+  },
+  {
+    "id": 8,
+    "category": "Examinations",
+    "question": "What is the passing criteria for University End-Semester Exams?",
+    "answer": "Students must score at least 40% marks in continuous internal evaluations and 40% in end-semester theory exams independently."
+  },
+  {
+    "id": 9,
+    "category": "Events",
+    "question": "Can external college students participate in StudentHub hackathons?",
+    "answer": "Yes, national level hackathons and open conferences permit inter-university teams with a valid college ID card."
+  },
+  {
+    "id": 10,
+    "category": "Fees",
+    "question": "Where can I view tuition fee receipts and payment status?",
+    "answer": "Fee invoices and payment history are available inside Dashboard under the 'Fees & Finance' section."
+  },
+  {
+    "id": 11,
+    "category": "Library",
+    "question": "How can I access digital library e-books and IEEE research papers?",
+    "answer": "Access the 'Digital Library' portal link on the home page using your university institutional email login."
+  },
+  {
+    "id": 12,
+    "category": "Hostel",
+    "question": "What is the hostel gate timing and leave application process?",
+    "answer": "Hostel gates close at 09:30 PM. Outing and weekend night-out leaves must be submitted digitally via the StudentHub hostel portal."
+  },
+  {
+    "id": 13,
+    "category": "Placements",
+    "question": "Are internship opportunities posted on StudentHub?",
+    "answer": "Yes, winter and summer industrial internships from 50+ partner companies are regularly listed under the Events & Placements tabs."
+  },
+  {
+    "id": 14,
+    "category": "Admissions",
+    "question": "How do I apply for government scholarships (e.g. Digital Gujarat / NSP)?",
+    "answer": "Download your bonafide certificate and fee receipts from your Profile page, then upload them to the respective scholarship portal."
+  },
+  {
+    "id": 15,
+    "category": "Technical",
+    "question": "Is StudentHub mobile responsive across all smartphones and tablets?",
+    "answer": "Yes, the UI is built with CSS Grid, Flexbox, and mobile-first media queries to fit screens from 320px to 4K displays seamlessly."
+  },
+  {
+    "id": 16,
+    "category": "Feedback",
+    "question": "How can I submit anonymous suggestions or grievances to faculty?",
+    "answer": "Visit the Feedback page, select your category, and toggle the 'Keep Feedback Anonymous' checkbox before submission."
+  }
+]
