@@ -1,0 +1,182 @@
+[
+    {
+        "name": "het bhimani",
+        "email": "25dit007@charusat.edu.in",
+        "mobile": "9274030334",
+        "password": "$2y$10$JRkSQVD0xYWmCZAfD97FU.798lE65FZbbAixsK0D6As418\/wMaqyO",
+        "dob": "2026-09-02",
+        "gender": "Male",
+        "course": "B.Tech IT",
+        "country": "India",
+        "state": "Maharashtra",
+        "city": "Nagpur",
+        "skills": [
+            "C++"
+        ],
+        "address": "pune",
+        "termsAccepted": true,
+        "registeredAt": "2026-09-26 14:36:52"
+    },
+    {
+        "name": "Krish Varsani",
+        "email": "25dcs140@charusat.edu.in",
+        "mobile": "9274401802",
+        "password": "$2y$10$G8a5JI6Ier.8QdvUbQEDo.CEGdXEEd5H46MT2G\/e9K5bCmVWRtsru",
+        "dob": "2007-02-26",
+        "gender": "Male",
+        "course": "B.Tech CSE",
+        "country": "India",
+        "state": "Gujarat",
+        "city": "Junagadh",
+        "skills": [
+            "C++"
+        ],
+        "address": "abs",
+        "termsAccepted": true,
+        "registeredAt": "2026-09-28 16:53:45"
+    },
+    {
+        "name": "Krish Varsani",
+        "email": "25dcs140@charusat.edu.in",
+        "mobile": "9274401802",
+        "password": "$2y$10$Q0aIJ63k\/oHVEyGE6gnu2OmAsVR0IovePCQOLZNAv6.TcXTnYYVf2",
+        "dob": "2007-02-26",
+        "gender": "Male",
+        "course": "B.Tech CSE",
+        "country": "India",
+        "state": "Gujarat",
+        "city": "Junagadh",
+        "skills": [
+            "C++"
+        ],
+        "address": "abs",
+        "termsAccepted": true,
+        "registeredAt": "2026-09-28 16:59:43"
+    },
+    {
+        "name": "Krish Varsani",
+        "email": "25dcs140@charusat.edu.in",
+        "mobile": "9274401802",
+        "password": "$2y$10$ixGACP9KI4WijGJDbtayse14wVDgchFJbUOpmVY0T2FTvi7cenRMy",
+        "dob": "2007-02-26",
+        "gender": "Male",
+        "course": "B.Tech CSE",
+        "country": "India",
+        "state": "Gujarat",
+        "city": "Junagadh",
+        "skills": [
+            "C++"
+        ],
+        "address": "abc",
+        "termsAccepted": true,
+        "registeredAt": "2026-09-28 17:00:47"
+    },
+    {
+        "name": "Krish Varsani",
+        "email": "25dcs140@charusat.edu.in",
+        "mobile": "9274401802",
+        "password": "$2y$10$llX9dAY5siE6ICBWsV3P1uU7pKawspXDG2fk9Ivrb5X7BKEopGCQS",
+        "dob": "2007-02-26",
+        "gender": "Male",
+        "course": "B.Tech CSE",
+        "country": "India",
+        "state": "Gujarat",
+        "city": "Junagadh",
+        "skills": [
+            "C++"
+        ],
+        "address": "abc",
+        "termsAccepted": true,
+        "registeredAt": "2026-09-28 17:12:51"
+    },
+    {
+        "name": "Krish Varsani",
+        "email": "25dcs140@charusat.edu.in",
+        "mobile": "9274401802",
+        "password": "$2y$10$sFLd0OUo0C1nJ7YtQTAr5OyD7iDyEuaO4BfKpJ9KDOzMpX7x9iTqu",
+        "dob": "2007-02-26",
+        "gender": "Male",
+        "course": "B.Tech CSE",
+        "country": "India",
+        "state": "Gujarat",
+        "city": "Junagadh",
+        "skills": [
+            "C++"
+        ],
+        "address": "abc",
+        "termsAccepted": true,
+        "registeredAt": "2026-09-28 17:17:13"
+    },
+    {
+        "name": "Krish Varsani",
+        "email": "25dcs140@charusat.edu.in",
+        "mobile": "9274401802",
+        "password": "$2y$10$u\/5OuisvqSAcmMqXsro9Jeujt\/HJDlHhs2kX9Fh1hedXiLXGRhVZ.",
+        "dob": "2007-02-26",
+        "gender": "Male",
+        "course": "B.Tech CSE",
+        "country": "India",
+        "state": "Gujarat",
+        "city": "Junagadh",
+        "skills": [
+            "C++"
+        ],
+        "address": "abc",
+        "termsAccepted": true,
+        "registeredAt": "2026-09-28 17:30:58"
+    },
+    {
+        "name": "Nayan Savliya",
+        "email": "25dcs115@charusat.edu.in",
+        "mobile": "1234567890",
+        "password": "$2y$10$Laa2x7wIcqMkfVHrBzGfbuOiCAPDeZs2FLtlGvEDvyCk7N\/JOm5sG",
+        "dob": "2007-10-30",
+        "gender": "Male",
+        "course": "B.Tech CSE",
+        "country": "India",
+        "state": "Gujarat",
+        "city": "Junagadh",
+        "skills": [
+            "C++"
+        ],
+        "address": "abc",
+        "termsAccepted": true,
+        "registeredAt": "2026-09-28 17:35:28"
+    },
+    {
+        "name": "Nayan Savliya",
+        "email": "25dcs115@charusat.edu.in",
+        "mobile": "1234567890",
+        "password": "$2y$10$nLGp6QVTiZkVavH8VPEYZ.T.xA3AQ\/4PYUgPX.JV8LMrXczmKFERe",
+        "dob": "2007-10-30",
+        "gender": "Male",
+        "course": "B.Tech CSE",
+        "country": "India",
+        "state": "Gujarat",
+        "city": "Rajkot",
+        "skills": [
+            "C++"
+        ],
+        "address": "abc",
+        "termsAccepted": true,
+        "registeredAt": "2026-09-28 17:41:36"
+    },
+    {
+        "name": "Krish Varsani",
+        "email": "25dcs140@charusat.edu.in",
+        "mobile": "9274401802",
+        "password": "$2y$10$CBzE76sffFK.REpueqy56eIrcG\/wP.TG3RA8CC8ztbbex0mDHGXZa",
+        "dob": "2007-02-26",
+        "gender": "Male",
+        "course": "B.Tech CSE",
+        "country": "India",
+        "state": "Gujarat",
+        "city": "Ahmedabad",
+        "skills": [
+            "C++"
+        ],
+        "address": "abc",
+        "termsAccepted": true,
+        "registeredAt": "2026-09-28 17:51:55"
+    }
+]
