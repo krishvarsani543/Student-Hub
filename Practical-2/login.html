@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudentHub Login</title>
+
+
+    <link rel="stylesheet" href="../Practical-3/login.css">
+</head>
+
+<body>
+
+
+
+    <header>
+
+        <div class="header-content">
+
+            <img src="https://admission.charusat.ac.in/View%20Assets/MainPage/assets/charusat%20images/logo.png"
+                alt="StudentHub Logo">
+
+            <div class="header-text">
+
+                <h1>StudentHub Portal</h1>
+
+                <h3 style="color: white;">Welcome Back</h3>
+
+                <p style="color: white;">
+                    Don't have an account?
+                    <a href="register.html" style="color: chocolate;">Register Here</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+
+    <form id="loginForm" action="../Practical-7&8&9/login.php" method="POST">
+        <input type="hidden" name="redirect" value="../Practical-2/deshboard.php?login=success">
+
+        <h2>Login</h2>
+
+        <table>
+
+
+
+            <tr>
+
+                <td>
+                    <label for="email">Email</label>
+                </td>
+
+                <td>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>
+                    <label for="password">Password</label>
+                </td>
+
+                <td>
+                    <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td colspan="2" class="forgot">
+
+                    <a href="#">Forgot Password?</a>
+
+                </td>
+
+            </tr>
+
+
+
+
+            <tr>
+
+                <td colspan="2" class="remember">
+
+                    <input type="checkbox" id="remember" name="remember" value="1">
+                    <label for="remember">Remember Me</label>
+
+
+                </td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td colspan="2" class="buttons">
+                    <p id="errormessage"></p>
+                    <button id="loginBtn" type="submit">
+                        Login
+                    </button>
+
+                    <button type="reset">
+                        Clear
+                    </button>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </form>
+
+    <div id="registrationModal" class="modal">
+
+        <div class="modal-content">
+
+            <button id="closeRegistrationModal" class="close">&times;</button>
+
+            <h2>Registration Successful!</h2>
+
+            <p>Your account has been registered successfully.</p>
+
+            <button id="okRegistrationModal">OK</button>
+
+        </div>
+
+    </div>
+
+
+    <div class="bottom">
+
+        <p>
+            New User?
+            <a href="register.html">
+                Create an Account
+            </a>
+        </p>
+
+        <br>
+
+        <small>
+            © 2026 StudentHub. All Rights Reserved.
+        </small>
+
+    </div>
+
+    <script src="../Practical-4&5/login.js"></script>
+</body>
+
+</html>

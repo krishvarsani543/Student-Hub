@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudentHub | Events</title>
+
+    <link rel="stylesheet" href="../Practical-3/events.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="header-content">
+
+        <img src="https://admission.charusat.ac.in/View%20Assets/MainPage/assets/charusat%20images/logo.png"
+            alt="StudentHub Logo">
+
+        <div class="header-text">
+
+            <h1>StudentHub Portal</h1>
+
+            <p>
+                <b>Empowering Students Through Technology</b>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <center>
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="events.html">Events</a>
+
+            <a href="profile.html">Profile</a>
+
+            <a href="feedback.html">Feedback</a>
+
+            <a href="home.html">Logout</a>
+
+        </center>
+
+    </nav>
+
+
+    <marquee>
+        Admission Open 2026 • AI Workshop Registration Started • National Hackathon Registration Open • Semester Examination Timetable Released
+    </marquee>
+
+</header>
+
+
+
+<section class="event-controls">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search events..."
+    >
+
+
+    <select id="categoryFilter">
+
+        <option value="all">All Categories</option>
+
+    </select>
+
+    <select id="sortSelect">
+
+        <option value="default">Sort By</option>
+
+        <option value="date-asc">Date: Old to New</option>
+
+        <option value="date-desc">Date: New to Old</option>
+
+        <option value="title-asc">Title: A to Z</option>
+
+        <option value="title-desc">Title: Z to A</option>
+
+    </select>
+
+</section>
+
+
+
+<p id="loadingMessage" class="status-message">
+    Loading events...
+</p>
+
+
+<p id="errorMessage" class="status-message error-message"></p>
+
+
+
+
+<section class="events" id="eventsContainer">
+
+</section>
+
+
+
+
+
+<div id="pagination" class="pagination"></div>
+
+
+
+<footer>
+
+    <p style="color:white;">
+        © 2026 StudentHub | All Rights Reserved
+    </p>
+
+</footer>
+
+
+
+<script src="../Practical-4&5/events.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "question": "How do I register on StudentHub?",
+        "answer": "Click on the <b>Register</b> page, fill in your details, and submit the registration form."
+    },
+    {
+        "id": 2,
+        "question": "How do I login?",
+        "answer": "Enter your registered email and password on the Login page."
+    },
+    {
+        "id": 3,
+        "question": "Can I edit my profile?",
+        "answer": "Yes. Go to the Profile page and click the <b>Edit Profile</b> button."
+    },
+    {
+        "id": 4,
+        "question": "How can I check my attendance?",
+        "answer": "Login to your Dashboard and open the Attendance section."
+    },
+    {
+        "id": 5,
+        "question": "Where can I see upcoming events?",
+        "answer": "Visit the Events page to view all upcoming university events."
+    },
+    {
+        "id": 6,
+        "question": "I forgot my password. What should I do?",
+        "answer": "Contact the administrator or use the Forgot Password option if available."
+    },
+    {
+        "id": 7,
+        "question": "How can I contact StudentHub?",
+        "answer": "Visit the Contact page or email us at <b>studenthub@gmail.com</b>."
+    },
+    {
+        "id": 8,
+        "question": "What is StudentHub?",
+        "answer": "StudentHub is a student portal designed to provide students with useful academic and campus information."
+    },
+    {
+        "id": 9,
+        "question": "How can I view university events?",
+        "answer": "Open the Events page from the navigation menu to view upcoming events."
+    },
+    {
+        "id": 10,
+        "question": "Can I search for an FAQ?",
+        "answer": "Yes. Use the search box at the top of the FAQ page to search questions or answers."
+    },
+    {
+        "id": 11,
+        "question": "How can I submit feedback?",
+        "answer": "Open the Feedback page, enter your feedback, and submit the form."
+    },
+    {
+        "id": 12,
+        "question": "Where can I find my student information?",
+        "answer": "Your student information can be viewed from the Profile or Dashboard section."
+    },
+    {
+        "id": 13,
+        "question": "Can I access StudentHub on a mobile device?",
+        "answer": "Yes. The StudentHub interface is designed to work on different screen sizes."
+    },
+    {
+        "id": 14,
+        "question": "How can I access the Admin page?",
+        "answer": "Use the Admin link from the navigation menu and provide the required administrator details."
+    },
+    {
+        "id": 15,
+        "question": "How can I logout from StudentHub?",
+        "answer": "Click the Logout option in the navigation menu to return to the home page."
+    }
+]

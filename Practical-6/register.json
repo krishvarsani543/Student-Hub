@@ -1,0 +1,57 @@
+{
+    "India": {
+        "Gujarat": [
+            "Ahmedabad",
+            "Surat",
+            "Vadodara",
+            "Rajkot",
+            "Junagadh"
+        ],
+        "Maharashtra": [
+            "Mumbai",
+            "Pune",
+            "Nagpur",
+            "Nashik"
+        ],
+        "Rajasthan": [
+            "Jaipur",
+            "Udaipur",
+            "Jodhpur",
+            "Kota"
+        ]
+    },
+    "USA": {
+        "California": [
+            "Los Angeles",
+            "San Francisco",
+            "San Diego"
+        ],
+        "Texas": [
+            "Houston",
+            "Dallas",
+            "Austin"
+        ],
+        "Florida": [
+            "Miami",
+            "Orlando",
+            "Tampa"
+        ]
+    },
+    "Canada": {
+        "Ontario": [
+            "Toronto",
+            "Ottawa",
+            "Hamilton"
+        ],
+        "Quebec": [
+            "Montreal",
+            "Quebec City",
+            "Laval"
+        ],
+        "Alberta": [
+            "Calgary",
+            "Edmonton",
+            "Red Deer"
+        ]
+    }
+}

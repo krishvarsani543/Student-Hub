@@ -1,0 +1,128 @@
+[
+    {
+        "id": "25DIT001",
+        "name": "Aarav Patel",
+        "department": "Information Technology",
+        "semester": 5,
+        "email": "25dit001@charusat.edu.in"
+    },
+    {
+        "id": "25DIT002",
+        "name": "Riya Shah",
+        "department": "Information Technology",
+        "semester": 5,
+        "email": "25dit002@charusat.edu.in"
+    },
+    {
+        "id": "25DIT003",
+        "name": "Kunal Mehta",
+        "department": "Information Technology",
+        "semester": 5,
+        "email": "25dit003@charusat.edu.in"
+    },
+    {
+        "id": "25CE001",
+        "name": "Dhruv Patel",
+        "department": "Computer Engineering",
+        "semester": 5,
+        "email": "25ce001@charusat.edu.in"
+    },
+    {
+        "id": "25CE002",
+        "name": "Mansi Shah",
+        "department": "Computer Engineering",
+        "semester": 5,
+        "email": "25ce002@charusat.edu.in"
+    },
+    {
+        "id": "25CE003",
+        "name": "Yash Joshi",
+        "department": "Computer Engineering",
+        "semester": 5,
+        "email": "25ce003@charusat.edu.in"
+    },
+    {
+        "id": "25CS001",
+        "name": "Het Patel",
+        "department": "Computer Science",
+        "semester": 4,
+        "email": "25cs001@charusat.edu.in"
+    },
+    {
+        "id": "25CS002",
+        "name": "Krisha Desai",
+        "department": "Computer Science",
+        "semester": 4,
+        "email": "25cs002@charusat.edu.in"
+    },
+    {
+        "id": "25CS003",
+        "name": "Dev Trivedi",
+        "department": "Computer Science",
+        "semester": 4,
+        "email": "25cs003@charusat.edu.in"
+    },
+    {
+        "id": "25IT004",
+        "name": "Meet Joshi",
+        "department": "Information Technology",
+        "semester": 3,
+        "email": "25it004@charusat.edu.in"
+    },
+    {
+        "id": "25IT005",
+        "name": "Nisha Patel",
+        "department": "Information Technology",
+        "semester": 3,
+        "email": "25it005@charusat.edu.in"
+    },
+    {
+        "id": "25EC001",
+        "name": "Parth Shah",
+        "department": "Electronics Engineering",
+        "semester": 6,
+        "email": "25ec001@charusat.edu.in"
+    },
+    {
+        "id": "25EC002",
+        "name": "Ananya Mehta",
+        "department": "Electronics Engineering",
+        "semester": 6,
+        "email": "25ec002@charusat.edu.in"
+    },
+    {
+        "id": "25ME001",
+        "name": "Raj Patel",
+        "department": "Mechanical Engineering",
+        "semester": 4,
+        "email": "25me001@charusat.edu.in"
+    },
+    {
+        "id": "25ME002",
+        "name": "Pooja Shah",
+        "department": "Mechanical Engineering",
+        "semester": 4,
+        "email": "25me002@charusat.edu.in"
+    },
+    {
+        "id": "25CE004",
+        "name": "Vivek Parmar",
+        "department": "Computer Engineering",
+        "semester": 6,
+        "email": "25ce004@charusat.edu.in"
+    },
+    {
+        "id": "25CS004",
+        "name": "Ishita Dave",
+        "department": "Computer Science",
+        "semester": 6,
+        "email": "25cs004@charusat.edu.in"
+    },
+    {
+        "id": "25IT006",
+        "name": "Sahil Patel",
+        "department": "Information Technology",
+        "semester": 3,
+        "email": "25it006@charusat.edu.in"
+    }
+]

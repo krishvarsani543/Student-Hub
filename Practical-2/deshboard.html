@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub Dashboard</title>
+
+    <link rel="stylesheet" href="../Practical-3/deshboard.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIINfQxQ4gM7K2w7J6j6bY6xJ7Jw6pQ4uQ="
+        crossorigin="">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-content">
+
+            <img src="https://admission.charusat.ac.in/View%20Assets/MainPage/assets/charusat%20images/logo.png"
+                alt="StudentHub Logo">
+
+            <div class="header-text">
+
+                <h1>StudentHub Portal</h1>
+
+                <p><b>Empowering Students Through Technology</b></p>
+
+            </div>
+
+        </div>
+
+        <nav>
+
+            <center>
+
+                <a href="dashboard.html">Dashboard</a>
+
+                <a href="events.html">Events</a>
+
+                <a href="profile.php">Profile</a>
+
+                <a href="feedback.html">Feedback</a>
+
+                <a href="../Practical-7&8&9/logout.php">Logout</a>
+
+            </center>
+
+        </nav>
+
+        <marquee>
+            Admission Open 2026 • AI Workshop Registration Started • National Hackathon Registration Open • Semester
+            Examination Timetable Released
+        </marquee>
+
+        <button id="themeToggle">🌙 Dark Mode</button>
+
+        <button id="weatherButton">🌦️ Weather</button>
+
+    </header>
+
+
+    <div class="container">
+
+        <div class="main">
+
+            <div class="topbar">
+
+                <div class="search">
+
+                    <input type="text" placeholder="Search...">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </div>
+
+
+                <div class="user">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <a href="profile.php" title="View Profile" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;cursor:pointer;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User">
+                        <span id="topbarUserName"><?= htmlspecialchars($_SESSION["name"] ?? "Student") ?></span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="welcome">
+
+                <h1 id="welcomeHeading">Welcome Back <?= htmlspecialchars($_SESSION["name"] ?? "Student") ?> 👋</h1>
+
+                <p id="welcomeCourse">B.Tech Information Technology</p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <i class="fa-solid fa-user-check"></i>
+
+                    <h2>96%</h2>
+
+                    <p>Attendance</p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <h2>8.75</h2>
+
+                    <p>CGPA</p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <i class="fa-solid fa-book"></i>
+
+                    <h2>7</h2>
+
+                    <p>Assignments</p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                    <h2>3</h2>
+
+                    <p>Projects</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-content">
+
+                <div class="left-panel">
+
+                    <div class="box">
+
+                        <h2>Quick Links</h2>
+
+                        <a href="profile.php">
+                            <i class="fa-solid fa-user"></i> My Profile
+                        </a>
+
+                        <a href="attendance.html">
+                            <i class="fa-solid fa-calendar-check"></i> Attendance
+                        </a>
+
+                        <a href="result.html">
+                            <i class="fa-solid fa-square-poll-vertical"></i> Results
+                        </a>
+
+                        <a href="fees.html">
+                            <i class="fa-solid fa-wallet"></i> Fees
+                        </a>
+
+                        <a href="assignment.html">
+                            <i class="fa-solid fa-book"></i> Assignments
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="right-panel">
+
+                    <div class="box">
+
+                        <h2>Latest Notices</h2>
+
+                        <ul>
+
+                            <li>📢 Internal Exam starts from 10 August.</li>
+
+                            <li>📢 Semester Project Submission: 20 August.</li>
+
+                            <li>📢 Hackathon Registration is Open.</li>
+
+                            <li>📢 Library will remain closed on Sunday.</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="activity">
+
+                <h2>Recent Activity</h2>
+
+                <ul>
+
+                    <li>✅ Assignment 7 Submitted Successfully</li>
+
+                    <li>✅ Attendance Updated</li>
+
+                    <li>✅ Semester Fees Paid</li>
+
+                    <li>✅ New Result Published</li>
+
+                    <li>✅ New Notice Added</li>
+
+                </ul>
+
+            </div>
+
+
+            <footer>
+
+                <p>© 2026 StudentHub | All Rights Reserved</p>
+
+            </footer>
+
+        </div>
+
+    </div>
+
+
+    <div id="successPopup">
+
+        <h2>Login Successful 🎉</h2>
+
+        <p>You are logged in successfully</p>
+
+    </div>
+
+
+    <div id="weatherPopup">
+
+        <div id="weatherPopupContent">
+
+            <button id="closeWeather">×</button>
+
+            <h2>🌦️ Current Weather</h2>
+
+            <div id="weatherInfo">
+
+                <p>Click Weather to get your current location and weather.</p>
+
+            </div>
+
+            <div id="weatherMap"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+
+    <script src="../Practical-4&5/deshboard.js"></script>
+
+</body>
+</html>

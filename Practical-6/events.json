@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "title": "Hackathon 2026",
+        "date": "2026-10-10",
+        "time": "10:00 AM",
+        "location": "Computer Department",
+        "category": "Technical",
+        "description": "24-Hour Coding Competition with exciting prizes.",
+        "buttonText": "Register"
+    },
+    {
+        "id": 2,
+        "title": "Independence Day Celebration",
+        "date": "2026-08-15",
+        "time": "8:00 AM",
+        "location": "Main Ground",
+        "category": "Cultural",
+        "description": "Flag Hoisting, Cultural Program and Speech.",
+        "buttonText": "View Details"
+    },
+    {
+        "id": 3,
+        "title": "Web Development Workshop",
+        "date": "2026-10-20",
+        "time": "11:00 AM",
+        "location": "Seminar Hall",
+        "category": "Workshop",
+        "description": "Learn HTML, CSS and JavaScript from industry experts.",
+        "buttonText": "Register"
+    },
+    {
+        "id": 4,
+        "title": "Sports Tournament",
+        "date": "2026-10-25",
+        "time": "9:00 AM",
+        "location": "Sports Complex",
+        "category": "Sports",
+        "description": "Cricket, Football, Volleyball and Indoor Games.",
+        "buttonText": "Participate"
+    },
+    {
+        "id": 5,
+        "title": "Placement Training",
+        "date": "2026-10-30",
+        "time": "2:00 PM",
+        "location": "Auditorium",
+        "category": "Placement",
+        "description": "Aptitude, Resume Building and Interview Preparation.",
+        "buttonText": "Join Now"
+    },
+    {
+        "id": 6,
+        "title": "Teachers Day Celebration",
+        "date": "2026-09-05",
+        "time": "10:30 AM",
+        "location": "Auditorium",
+        "category": "Cultural",
+        "description": "Cultural performances and award ceremony.",
+        "buttonText": "View Details"
+    },
+    {
+        "id": 7,
+        "title": "AI and Machine Learning Seminar",
+        "date": "2026-11-05",
+        "time": "11:00 AM",
+        "location": "Seminar Hall",
+        "category": "Technical",
+        "description": "Introduction to Artificial Intelligence and Machine Learning.",
+        "buttonText": "Register"
+    },
+    {
+        "id": 8,
+        "title": "Coding Contest",
+        "date": "2026-11-10",
+        "time": "10:00 AM",
+        "location": "Computer Lab",
+        "category": "Technical",
+        "description": "Competitive programming contest for students.",
+        "buttonText": "Participate"
+    },
+    {
+        "id": 9,
+        "title": "Career Guidance Session",
+        "date": "2026-11-15",
+        "time": "1:00 PM",
+        "location": "Conference Hall",
+        "category": "Career",
+        "description": "Career guidance and professional development session.",
+        "buttonText": "Join Now"
+    },
+    {
+        "id": 10,
+        "title": "Photography Competition",
+        "date": "2026-11-20",
+        "time": "9:30 AM",
+        "location": "Student Activity Center",
+        "category": "Cultural",
+        "description": "Photography competition for creative students.",
+        "buttonText": "Participate"
+    },
+    {
+        "id": 11,
+        "title": "Cyber Security Workshop",
+        "date": "2026-11-25",
+        "time": "10:30 AM",
+        "location": "Computer Department",
+        "category": "Workshop",
+        "description": "Learn basic concepts of cyber security and online safety.",
+        "buttonText": "Register"
+    },
+    {
+        "id": 12,
+        "title": "Football Tournament",
+        "date": "2026-12-01",
+        "time": "8:30 AM",
+        "location": "University Ground",
+        "category": "Sports",
+        "description": "Inter-department football tournament.",
+        "buttonText": "Participate"
+    },
+    {
+        "id": 13,
+        "title": "Resume Building Workshop",
+        "date": "2026-12-05",
+        "time": "2:00 PM",
+        "location": "Seminar Hall",
+        "category": "Career",
+        "description": "Learn how to create an effective professional resume.",
+        "buttonText": "Register"
+    },
+    {
+        "id": 14,
+        "title": "Annual Cultural Fest",
+        "date": "2026-12-10",
+        "time": "5:00 PM",
+        "location": "Main Ground",
+        "category": "Cultural",
+        "description": "Music, dance, drama and various cultural performances.",
+        "buttonText": "View Details"
+    },
+    {
+        "id": 15,
+        "title": "Java Programming Workshop",
+        "date": "2026-12-15",
+        "time": "11:00 AM",
+        "location": "Programming Lab",
+        "category": "Technical",
+        "description": "Hands-on Java programming and object-oriented programming workshop.",
+        "buttonText": "Register"
+    }
+]
